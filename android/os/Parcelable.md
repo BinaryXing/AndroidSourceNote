@@ -20,30 +20,37 @@
 ### 源码
 
 #### 1.成员变量
+
 ```
 public static final int PARCELABLE_WRITE_RETURN_VALUE = 0x0001;
 ```
+
 ```
 public static final int CONTENTS_FILE_DESCRIPTOR = 0x0001;
 ```
 
 #### 2.成员函数
+
 - 描述Parcel中的特殊对象
+
     ```
     public int describeContents();
     ```
 - 写入Parcel
+
     ```
     public void writeToParcel(Parcel dest, int flags);
     ```
     - flags表示该对象该如何被写入，一般为0；
 - Creator\<T\>
     - 读取
+
         ```
         public T createFromParcel(Parcel source);
         ```
         - 从Parcel中读取一个对象；
     - 创建一个相关类型的数组
+
         ```
         public T[] newArray(int size);
         ```
@@ -51,6 +58,7 @@ public static final int CONTENTS_FILE_DESCRIPTOR = 0x0001;
 - ClassLoaderCreator\<T\>
     - 继承于Creator\<T\>接口；
     - 读取
+    
         ```
         public T createFromParcel(Parcel source, ClassLoader loader);
         ```
