@@ -1,7 +1,9 @@
 ### 前言
 - Android源码基于API14；
-- 继承自 [InputEvent](SDK-InputEvent.md) ，实现了 [Parcelable](SDK_Parcelable.md) 接口
+- 继承自 [InputEvent](SDK-InputEvent.md) ，实现了 [Parcelable](SDK_Parcelable.md) 接口；
+
 ***
+
 ### 概述
 - 该对象用来记录运动事件（包括mouse，pen，finger，trackball），持有相对或者绝对Motion事件以及其他数据；
 
@@ -43,6 +45,9 @@
     - View应该随时准备好处理cancel事件和容忍在前一个事件流还没结束时，就接收到down事件；
 
 ***
+
 ### 源码
+
 ***
+
 ### 思考点

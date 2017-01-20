@@ -1,16 +1,22 @@
 [jumpf-Parcelable]:     ../os/Parcelable.md     "Parcelable"
 [jumpf-KeyEvent]:       KeyEvent.md             "KeyEvent"
 [jumpf-MotionEvent]:    MotionEvent.md          "MotionEvent"
+
 ### 前言
 - Android源码基于API14;
 - 是抽象类，实现了 [Parcelable][jumpf-parcelable] 接口；
 - 子类包括 [KeyEvent][jumpf-KeyEvent] 和 [MotionEvent][jumpf-MotionEvent];
+
 ***
+
 ### 概述
+
 ***
+
 ### 源码
+
 #### 1.成员变量
--   Token常量
+- Token常量
     ```
     /** @hide */
     protected static final int PARCEL_TOKEN_MOTION_EVENT = 1;
@@ -38,7 +44,9 @@
     };
     ```
     - 用于Parcelable读取；
+
 #### 2.成员方法
+
 - 构造方法
     ```
     /*package*/ InputEvent() {}
@@ -89,6 +97,9 @@
     public abstract long getEventTimeNano();
     ```
     - 单位是纳秒
+
+***
+
 ### 思考点
 - [ ] getDeviceId和getSource()区别
 - [ ] InputEvent的回收；
